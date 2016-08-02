@@ -1,0 +1,12 @@
+{
+  "header": {
+    "additionalProperties": true,
+    "plural": "headers"
+  },
+  "path": {
+    "additionalProperties": false
+  },
+  "query": {
+    "additionalProperties": false
+  }
+}

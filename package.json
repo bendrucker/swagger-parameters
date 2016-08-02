@@ -1,0 +1,40 @@
+{
+  "name": "swagger-parameters",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Validate and parse swagger parameters arrays",
+  "license": "MIT",
+  "repository": "bendrucker/swagger-parameters",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape *.js"
+  },
+  "keywords": [
+    "swagger",
+    "json",
+    "api",
+    "schema",
+    "open api",
+    "spec",
+    "parameters",
+    "http"
+  ],
+  "devDependencies": {
+    "deep-sort-object": "~1.0.1",
+    "standard": "^7.0.0",
+    "tape": "^4.0.0"
+  },
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "ajv": "~4.3.0",
+    "deep-extend": "~0.4.1",
+    "map-values": "~1.0.1",
+    "xtend": "~4.0.1"
+  }
+}
