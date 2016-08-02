@@ -29,7 +29,8 @@
     "tape": "^4.0.0"
   },
   "files": [
-    "*.js"
+    "*.js",
+    "types.json"
   ],
   "dependencies": {
     "ajv": "~4.3.0",
