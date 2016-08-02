@@ -1,7 +1,8 @@
 # swagger-parameters [![Build Status](https://travis-ci.org/bendrucker/swagger-parameters.svg?branch=master)](https://travis-ci.org/bendrucker/swagger-parameters)
 
-> Validate and parse swagger parameters arrays
+> Validate and parse request data using swagger parameters arrays
 
+swagger-parameters turns your [Swagger/OpenAPI parameters](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#parameterObject) into a full JSON schema that can be used to parse and validate HTTP request data. The library is fully server-agnostic. You're responsible for converting your request paths and queries into key-value data. swagger-parameters will perform validation and type coercion and return a copy of your parsed data (if valid).
 
 ## Install
 
@@ -14,6 +15,7 @@ $ npm install --save swagger-parameters
 
 ```js
 var Parser = require('swagger-parameters')
+// var Schema = require('swagger-parameters/schema')
 
 // /users/{id}/orders?page={page}
 var parse = Parser([
