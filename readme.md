@@ -51,7 +51,7 @@ parse({
 
 ## API
 
-#### `Parser(parameters)` -> `function<parse>`
+#### `Parser(parameters, [data])` -> `function<parse>`
 
 ##### parameters
 
@@ -59,6 +59,13 @@ Type: `array[object]`
 Default: `[]`
 
 An array of Swagger/OpenAPI [parameter definition](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#parameters-definitions-object).
+
+##### data
+
+*Required*  
+Type: `object`
+
+Data that can be resolved by `$ref` parameters.
 
 #### `parse(data, callback)` -> `undefined`
 

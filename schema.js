@@ -1,17 +1,20 @@
 'use strict'
 
 const extend = require('xtend')
+const pointer = require('json-pointer')
+const partial = require('ap').partial
 const types = require('./types.json')
 
 module.exports = Schema
 
-function Schema (parameters) {
+function Schema (parameters, data) {
   const schema = initial(types)
   if (!parameters || !parameters.length) {
     return schema
   }
 
   return parameters
+    .map(partial(dereference, data))
     .filter(function (parameter) {
       return types.hasOwnProperty(parameter.in)
     })
@@ -62,4 +65,9 @@ function accumulateParameter (acc, parameter) {
   destination.properties[key] = data
 
   return acc
+}
+
+function dereference (data, parameter) {
+  if (!parameter.$ref) return parameter
+  return pointer.get(data, parameter.$ref.replace(/^#/, ''))
 }
