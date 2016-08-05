@@ -5,6 +5,8 @@ const sort = require('deep-sort-object')
 const Schema = require('./schema')
 
 test('schema', function (t) {
+  t.throws(Schema.bind(null, {}), /parameters/, 'parameters must be undefined or Array')
+
   t.deepEqual(
     sort(Schema([
       {
