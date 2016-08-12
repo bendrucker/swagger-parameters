@@ -61,7 +61,7 @@ test('main', function (t) {
     t.ok(Array.isArray(err.errors), 'has ajv errors as err.errors')
     t.deepEqual(err.errors, [{
       keyword: 'type',
-      dataPath: '.path.id',
+      dataPath: '/path/id',
       schemaPath: '#/properties/path/properties/id/type',
       params: {type: 'integer'},
       message: 'should be integer'
@@ -140,7 +140,7 @@ test('references', function (t) {
     t.ok(Array.isArray(err.errors), 'has ajv errors as err.errors')
     t.deepEqual(err.errors, [{
       keyword: 'type',
-      dataPath: '.path.id',
+      dataPath: '/path/id',
       schemaPath: '#/properties/path/properties/id/type',
       params: {type: 'integer'},
       message: 'should be integer'

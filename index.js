@@ -8,7 +8,7 @@ const Schema = require('./schema')
 module.exports = Parser
 
 function Parser (parameters, data) {
-  const ajv = new Ajv({coerceTypes: true})
+  const ajv = new Ajv({coerceTypes: true, jsonPointers: true})
   const schema = Schema(parameters, data)
   const validate = ajv.compile(schema)
 
