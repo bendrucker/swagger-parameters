@@ -1,7 +1,7 @@
 {
   "name": "swagger-parameters",
   "main": "index.js",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Validate and parse request data using swagger parameters arrays",
   "license": "MIT",
   "repository": "bendrucker/swagger-parameters",
