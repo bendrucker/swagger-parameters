@@ -40,9 +40,9 @@ test('main', function (t) {
   }, function (err, data) {
     if (err) return t.end(err)
     t.deepEqual(data, {
-      path: {id: 1},
-      query: {page: 2},
-      headers: {token: 'boop'}
+      path: { id: 1 },
+      query: { page: 2 },
+      headers: { token: 'boop' }
     }, 'validates and coerces valid data')
   })
 
@@ -63,12 +63,12 @@ test('main', function (t) {
       keyword: 'type',
       dataPath: '/path/id',
       schemaPath: '#/properties/path/properties/id/type',
-      params: {type: 'integer'},
+      params: { type: 'integer' },
       message: 'should be integer'
     }], 'includes error data')
   })
 
-  const raw = {path: {id: '1'}, query: {page: '2'}, headers: {token: 'boop'}}
+  const raw = { path: { id: '1' }, query: { page: '2' }, headers: { token: 'boop' } }
   parameters(raw, function (err, data) {
     if (err) return t.end(err)
     t.notEqual(raw, data, 'copies data')
@@ -119,9 +119,9 @@ test('references', function (t) {
   }, function (err, data) {
     if (err) return t.end(err)
     t.deepEqual(data, {
-      path: {id: 1},
-      query: {page: 2},
-      headers: {token: 'boop'}
+      path: { id: 1 },
+      query: { page: 2 },
+      headers: { token: 'boop' }
     }, 'validates and coerces valid data')
   })
 
@@ -142,12 +142,12 @@ test('references', function (t) {
       keyword: 'type',
       dataPath: '/path/id',
       schemaPath: '#/properties/path/properties/id/type',
-      params: {type: 'integer'},
+      params: { type: 'integer' },
       message: 'should be integer'
     }], 'includes error data')
   })
 
-  const raw = {path: {id: '1'}, query: {page: '2'}, headers: {token: 'boop'}}
+  const raw = { path: { id: '1' }, query: { page: '2' }, headers: { token: 'boop' } }
   parameters(raw, function (err, data) {
     if (err) return t.end(err)
     t.notEqual(raw, data, 'copies data')
@@ -195,9 +195,9 @@ test('array', function (t) {
   }, function (err, data) {
     if (err) return t.end(err)
     t.deepEqual(data, {
-      path: {id: [1]},
-      query: {page: 2},
-      headers: {token: 'boop'}
+      path: { id: [1] },
+      query: { page: 2 },
+      headers: { token: 'boop' }
     }, 'validates and coerces valid data')
   })
 
@@ -218,12 +218,12 @@ test('array', function (t) {
       keyword: 'type',
       dataPath: '/path/id/0',
       schemaPath: '#/properties/path/properties/id/items/type',
-      params: {type: 'integer'},
+      params: { type: 'integer' },
       message: 'should be integer'
     }], 'includes error data')
   })
 
-  const raw = {path: {id: '1'}, query: {page: '2'}, headers: {token: 'boop'}}
+  const raw = { path: { id: '1' }, query: { page: '2' }, headers: { token: 'boop' } }
   parameters(raw, function (err, data) {
     if (err) return t.end(err)
     t.notEqual(raw, data, 'copies data')
