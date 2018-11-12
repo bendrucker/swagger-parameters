@@ -126,5 +126,47 @@ test('schema', function (t) {
     'ignores unhandled types'
   )
 
+  t.deepEqual(
+    sort(Schema([
+      {
+        name: 'page',
+        in: 'query',
+        schema: {
+          type: 'integer'
+        }
+      }
+    ])),
+    sort({
+      title: 'HTTP parameters',
+      type: 'object',
+      properties: {
+        headers: {
+          title: 'HTTP headers',
+          type: 'object',
+          properties: {},
+          additionalProperties: true
+        },
+        path: {
+          title: 'HTTP path',
+          type: 'object',
+          properties: {},
+          additionalProperties: false
+        },
+        query: {
+          title: 'HTTP query',
+          type: 'object',
+          properties: {
+            page: {
+              type: 'integer'
+            }
+          },
+          additionalProperties: false
+        }
+      },
+      additionalProperties: false
+    }),
+    'generates openAPI 3.0.0 schema from parameter definitions'
+  )
+
   t.end()
 })
