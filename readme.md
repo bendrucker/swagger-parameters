@@ -1,4 +1,4 @@
-# swagger-parameters [![Build Status](https://travis-ci.org/bendrucker/swagger-parameters.svg?branch=master)](https://travis-ci.org/bendrucker/swagger-parameters)
+# swagger-parameters [![Build Status](https://travis-ci.org/bendrucker/swagger-parameters.svg?branch=master)](https://travis-ci.org/bendrucker/swagger-parameters) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/swagger-parameters.svg)](https://greenkeeper.io/)
 
 > Validate and parse request data using swagger parameters arrays
 

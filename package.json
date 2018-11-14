@@ -33,9 +33,9 @@
     "types.json"
   ],
   "dependencies": {
-    "ajv": "~4.3.0",
+    "ajv": "~6.5.5",
     "ap": "~0.2.0",
-    "json-pointer": "~0.5.0",
+    "json-pointer": "~0.6.0",
     "map-values": "~1.0.1",
     "xtend": "~4.0.1"
   }
