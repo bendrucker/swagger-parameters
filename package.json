@@ -33,7 +33,7 @@
     "types.json"
   ],
   "dependencies": {
-    "ajv": "~6.5.5",
+    "ajv": "~6.6.0",
     "ap": "~0.2.0",
     "json-pointer": "~0.6.0",
     "map-values": "~1.0.1",
