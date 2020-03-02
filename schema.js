@@ -56,8 +56,9 @@ function accumulateParameter (acc, parameter) {
   const source = parameter.in
   const key = parameter.name
   const required = parameter.required
-  const data = extend(parameter)
   const destination = acc.properties[types[source].plural || source]
+
+  const data = extend(parameter.schema || parameter)
 
   delete data.name
   delete data.in
